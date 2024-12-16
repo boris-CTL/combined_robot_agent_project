@@ -1,0 +1,36 @@
+# Karel State Explanation
+
+The Karel state represents a grid world of size n x n, where n is the number of rows and columns. Each cell in the grid contains one of the following:
+
+## Grid Representation
+'x': Represents a wall cell. Karel cannot move through these cells.
+'.': Denotes an empty cell that Karel can traverse.
+'m': Indicates a cell containing exactly 1 marker.
+'M': Indicates a cell containing exactly 2 markers.
+
+## Karel's Position and Orientation
+Karel's position and orientation in the grid are not represented directly on the grid. Instead, they are described with a separate statement. This description includes Karel's exact coordinates and the direction Karel is facing.
+
+The position is given in coordinates (x, y), where x is the column number and y is the row number.
+The orientation is one of the four cardinal directions: North, East, South, or West.
+
+For example:
+
+Consider an 8x8 grid with the following features:
+
+* Walls surround the outer boundary of the grid.
+* There is 1 marker in the second cell of the top row.
+* There are 2 markers in the second to last cell of the top row.
+* Karel is located in the second cell from the left in the bottom row, facing East.
+The grid representation would be:
+
+xxxxxxxx
+xm....Mx
+x......x
+x......x
+x......x
+x......x
+x......x
+xxxxxxxx
+Karel is at (1, 6), facing East
+

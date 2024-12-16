@@ -1,0 +1,32 @@
+### Karel State Explanation
+
+The Karel state represents a grid world of size n x n, where n is the number of rows and columns. Each cell in the grid contains one of the following:
+
+'x' - Wall cell that Karel cannot move through
+
+'.' - Empty, traversable cell
+
+'m' - Cell containing 1 marker
+
+'M' - Cell containing 2 markers
+
+'E' - Karel is in this cell, facing East
+
+'W' - Karel is in this cell, facing West
+
+'N' - Karel is in this cell, facing North
+
+'S' - Karel is in this cell, facing South
+
+For example:
+
+xxxxxxxx
+xm....Mx
+x......x
+x......x
+x......x
+x......x
+xE.....x
+xxxxxxxx
+
+This represents an 8x8 grid world surrounded by walls. Karel starts in the bottom left corner facing East. There is 1 marker in the top left corner and 2 markers in the top right corner. The rest of the cells are empty.

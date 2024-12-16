@@ -1,0 +1,20 @@
+**Guide to Directing Karel the Robot**
+
+**Basic Commands:**
+1. `move`: This command makes Karel step one space forward in the direction it's facing.
+2. `turnRight`: This tells Karel to pivot 90 degrees on the spot towards its right.
+3. `turnLeft`: This directs Karel to spin 90 degrees on the spot towards its left.
+4. `pickMarker`: This orders Karel to collect a marker present in the same spot as it's currently on.
+5. `putMarker`: This instructs Karel to deposit a marker right on its current spot.
+
+**Examples of Command Sequences:**
+
+1. For a trajectory that involves picking up three markers, one might use:
+   - 'move pickMarker move pickMarker move pickMarker move'
+   - This sequence means: "Karel moves forward one space, picks up a marker, moves forward again to the next space, picks another marker, and repeats the process once more, ending with a final move forward."
+
+2. For a trajectory involving movement and turns, one might use:
+   - 'move turnLeft move turnRight'
+   - This sequence translates to: "Karel advances one space forward, makes a 90-degree turn to the left, proceeds to move one space forward again, and then makes a 90-degree turn to the right."
+
+Remember, Karel follows these commands in the order they are given, performing each action sequentially.

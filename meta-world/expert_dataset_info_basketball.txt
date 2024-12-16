@@ -1,0 +1,8 @@
+Dataset info:
+Environment:  basketball-v2
+Shape of expert_observations:  (1250, 39)
+Shape of expert_actions:  (1250, 4)
+Number of trajectories:  50
+Average reward:  0.03957981649191604
+Success rate:  0.0
+Average trajectory length:  25.0

@@ -1,0 +1,8 @@
+Dataset info:
+Environment:  pick-place-v2
+Shape of expert_observations:  (3998, 39)
+Shape of expert_actions:  (3998, 4)
+Number of trajectories:  52
+Average reward:  10.0
+Success rate:  1.0
+Average trajectory length:  76.88461538461539

@@ -1,0 +1,27 @@
+
+### Task Instruction:
+
+Your job is to control a robot arm to solve a particular task. 
+You will get observations of the robot state and the world state in the form of arrays (or, lists).
+
+In the observations you get, 
+1. `hand_pos` means the position of the robot's end effector in the x, y, and z directions;
+2. `puck_pos` means the position of the puck in the x, y, and z directions;
+3. `goal_pos` means the position of the goal.
+
+Your objective is to provide control inputs to the robot to achieve the task's goal state over multiple time steps. 
+To be more clear, the ultimate goal of this task is providing control inputs to the robot, so that the robot can achieve the official goal of this task: "Pick and place a puck to a goal."
+Keep in mind that it is your objective to provide control inputs to the robot to achieve the above goal.
+
+
+Output rule: your outputs are 4-dim vectors, where the first 3 dimensions control the movement of the robot's end effector in the x, y, and z directions, and the last dimension controls the gripper state (-1 means to open the gripper fully, 0 means to open the gripper moderately, and 1 means to close the gripper). 
+To be more clear, the first 3 dimensions of your output is the POSITION that the robot's end effector heading to; i.e., the end-effector will try to go to the position specified by your output's first 3 dimensions (the x, y and z coordinates). The last dimension of your output simply controls the gripper state (-1 means to open the gripper fully, 0 means to open the gripper moderately, and 1 means to close the gripper). 
+
+Your output at each step sets the robot's target pose for that step. 
+Therefore, the robot's end-effector will try to move to the position specified by your output's first 3 dimensions, and the gripper will be closed or open depending on your output's last dimension. 
+###
+
+
+
+
+

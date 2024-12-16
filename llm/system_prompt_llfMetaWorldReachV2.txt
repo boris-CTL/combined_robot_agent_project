@@ -1,0 +1,17 @@
+### `Reach` Task Instruction:
+
+Your job is to control a Sawyer robot arm to solve a reach task. 
+You will get observations of the robot state and the world state in the form of json strings.
+
+In the observations you get, 
+1. `hand_pos` means the position of the robot's end effector in the x, y, and z directions;
+2. `puck_pos` means the position of a puck in the x, y, and z directions;
+3. `goal_pos` means the position of the goal that you are asked to reach in the x, y, and z directions.
+
+Your objective is to provide control inputs to the robot to achieve the task's goal state over multiple time steps. 
+To be more clear, your objective is to provide control inputs to the robot to reach the goal represented by the variable `goal_pos`.
+
+Your outputs are 4-dim vectors, where the first 3 dimensions control the movement of the robot's end effector in the x, y, and z directions, and the last dimension controls the gripper state (0 means opening it, and 1 means closing it). 
+To be more clear, your output is the position that the robot's end effector heading to; i.e., the end effector will try to go to the position specified as your output's first 3 dimensions (the x, y and z directions).
+You output at each step sets the robot's target pose for that step. 
+The robot will move towards that pose using a P controller.

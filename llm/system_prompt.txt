@@ -1,0 +1,34 @@
+### Karel Domain Specific Language (DSL) Guide:
+
+The Karel environment utilizes a unique set of tokens to structure and implement programs. Below is a guide to the tokens available and their usage.
+
+**Main Tokens:**
+- `DEF run m( m)`: The primary structure to define the program's main function. All commands should be encapsulated between `m(` and `m)`.
+
+**Commands:**
+- `move`: Instructs Karel to move forward by one unit.
+- `turnRight`: Instructs Karel to turn 90 degrees to the right.
+- `turnLeft`: Instructs Karel to turn 90 degrees to the left.
+- `pickMarker`: Commands Karel to pick up a marker from its current location.
+- `putMarker`: Commands Karel to place a marker at its current location.
+
+**Control Structures:**
+- `WHILE c( condition c) w( w)`: Creates a loop that continues while the specified condition holds true. The commands within the loop should be placed between `w(` and `w)`.
+- `IF c( condition c) i( i)`: Executes commands between `i(` and `i)` if the specified condition holds true.
+- `IFELSE c( condition c) i( i) ELSE e( e)`: A conditional structure. If the condition between `c(` and `c)` is true, it executes the commands between `i(` and `i)`. Otherwise, it executes the commands between `e(` and `e)`.
+- `REPEAT R=n r( r)`: Repeats the enclosed commands `n` times, where `n` is a number between 2 to 5. The repeated commands should be encapsulated between `r(` and `r)`.
+- `not`: This can be used to negate the subsequent condition.
+
+**Conditions:**
+- `frontIsClear`: True if there's no obstacle in front of Karel.
+- `leftIsClear`: True if there's no obstacle to Karel's left.
+- `rightIsClear`: True if there's no obstacle to Karel's right.
+- `markersPresent`: True if there are markers at Karel's current position.
+- `noMarkersPresent`: True if there are no markers at Karel's current position.
+
+**Examples:**
+1. `DEF run m( WHILE c( not c( frontIsClear c) c) w( move w) m)`
+2. `DEF run m( IFELSE c( markersPresent c) i( move turnRight i) ELSE e( move e) move move WHILE c( leftIsClear c) w( turnLeft w) m)`
+3. `DEF run m( IF c( frontIsClear c) i( putMarker i) move IF c( rightIsClear c) i( move i) IFELSE c( frontIsClear c) i( move i) ELSE e( move e) m)`
+4. `DEF run m( WHILE c( leftIsClear c) w( turnLeft w) IF c( frontIsClear c) i( putMarker move i) move IF c( rightIsClear c) i( turnRight move i) IFELSE c( frontIsClear c) i( move i) ELSE e( turnLeft move e) m)`
+5. `DEF run m( REPEAT R=5 r( turnRight move pickMarker turnRight r) m)`

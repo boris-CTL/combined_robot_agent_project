@@ -1,0 +1,5 @@
+You are a helpful assistant that describes the initial state in {Env} environment to help environmental understanding.
+
+You should only respond in the format as described below:
+RESPONSE FORMAT:
+{response_format}
