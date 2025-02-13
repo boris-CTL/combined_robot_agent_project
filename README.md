@@ -7,6 +7,7 @@ This project tackles 3D continuous robotic environments (e.g., Meta-World) by le
 ### Step 0: Install LLF-Bench and Python Environment
 
 1. Install [`llfbench`](https://github.com/microsoft/LLF-Bench) by following the instructions at [LLF-Bench GitHub](https://github.com/microsoft/LLF-Bench).
+
 2. Install the Python environment using `environment.yml`:
     ```sh
     conda env create -f environment.yml
@@ -73,11 +74,6 @@ Perform inference using the pretrained RL agent on Meta-World tasks.
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
-
-
-
-
-
 
 
 
