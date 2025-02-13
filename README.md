@@ -25,7 +25,7 @@ For tasks in the Meta-World environment, use LLMs to generate continuous actions
     ```sh
     python3 gpt35_WindowCloseV2_ArgparseVersion.py
     ```
-    This will generate trajectories and save them in the [outdir_WindowCloseV2](http://_vscodecontentref_/0) folder as `.npz` files.
+    This will generate trajectories and save them in the [outdir_WindowCloseV2](https://github.com/boris-CTL/combined_robot_agent_project/tree/main/outdir_WindowCloseV2) folder as `.npz` files.
 
     **Note**: Set up your OpenAI key and organization key in the script:
     ```python
@@ -38,7 +38,7 @@ For tasks in the Meta-World environment, use LLMs to generate continuous actions
     python3 gpt35_PickPlaceV2_ArgparseVersion.py
     ```
 
-3. The [llm_generated_trajectories](http://_vscodecontentref_/1) folder contains trajectories for four tasks: `basketball-v2`, `pick-place-v2`, `reach-v2`, and `window-close-v2`. These can be used directly for constructing the expert dataset in Step 2.
+3. The [llm_generated_trajectories](https://github.com/boris-CTL/combined_robot_agent_project/tree/main/llm_generated_trajectories) folder contains trajectories for four tasks: `basketball-v2`, `pick-place-v2`, `reach-v2`, and `window-close-v2`. These can be used directly for constructing the expert dataset in Step 2.
 
 ### Step 2: Construct Expert Dataset and Pretrain RL Agent
 
