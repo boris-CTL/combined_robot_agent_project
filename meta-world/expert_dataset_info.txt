@@ -1,8 +1,0 @@
-Dataset info:
-Environment:  reach-v2
-Shape of expert_observations:  (39210, 39)
-Shape of expert_actions:  (39210, 4)
-Number of trajectories:  200
-Average reward:  9.73531727258046
-Success rate:  0.9
-Average trajectory length:  196.05

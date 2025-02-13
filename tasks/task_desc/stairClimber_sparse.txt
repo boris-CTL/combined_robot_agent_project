@@ -1,2 +1,0 @@
-Task name: stairClimber_sparse
-In this task, the agent is asked to move along the stair to reach the marked grid. The initial location of the agent and the marker is randomized near the stair, with the marker placed on the higher end. The reward is defined as 1 if the agent successfully reaches the marked grid and 0 otherwise.

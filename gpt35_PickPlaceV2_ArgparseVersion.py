@@ -356,25 +356,47 @@ class LLM:
         return predictions
   
 
+# import openai
+# import traceback
+
+# def openai_chat_response(messages, open_ai_api_key, temperature = 1.0, gpt="gpt-3.5-turbo"): #gpt="gpt-4"):
+#     print(f'Prompt:\n{messages}')
+#     # input('Continue?\n')
+    
+#     try:
+#         # openai.api_key = "your-api-key-here"
+#         openai.api_key = open_ai_api_key
+#         response = openai.ChatCompletion.create(
+#         model=gpt,
+#         messages=messages,
+#         temperature=temperature
+#         )
+#         return response.choices[0].message.content
+#     except:
+#         traceback.print_exc()
+#         time.sleep(100)
+
+
 import openai
+import time
 import traceback
 
-def openai_chat_response(messages, open_ai_api_key, temperature = 1.0, gpt="gpt-3.5-turbo"): #gpt="gpt-4"):
+def openai_chat_response(messages, open_ai_api_key, temperature=1.0, gpt="gpt-3.5-turbo"):
     print(f'Prompt:\n{messages}')
-    # input('Continue?\n')
-    
+
     try:
-        # openai.api_key = "your-api-key-here"
-        openai.api_key = open_ai_api_key
-        response = openai.ChatCompletion.create(
-        model=gpt,
-        messages=messages,
-        temperature=temperature
+        client = openai.OpenAI(api_key=open_ai_api_key)  # 創建 OpenAI 客戶端
+        response = client.chat.completions.create(
+            model=gpt,
+            messages=messages,
+            temperature=temperature
         )
         return response.choices[0].message.content
-    except:
+    except Exception as e:
         traceback.print_exc()
         time.sleep(100)
+
+
 
 def init(cfg):
     # Set up OpenAI api key
@@ -555,7 +577,7 @@ if __name__ == "__main__":
         os.makedirs(outdir)
 
     # make folder for npz file saving
-    outdir_for_saving = f"./outdir_{ENV_NAME}/{ENV_NAME}"
+    outdir_for_saving = f"./outdir_{ENV_NAME}"
     # Create output directory if it does not already exist
     if not os.path.exists(outdir_for_saving):
         os.makedirs(outdir_for_saving)    
@@ -578,7 +600,7 @@ if __name__ == "__main__":
 
     # set up OpenAI key
     config['api_key'] = "your_api_key_here"
-    config['openai_org'] = "org-VFSaZQgJUGtyglfUzEzesHAC"
+    config['openai_org'] = "your_organization_key_here"
     
     
     # llm model initialisation in __main__ :

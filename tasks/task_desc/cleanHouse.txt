@@ -1,2 +1,0 @@
-Task name: cleanHouse
-There is some garbage (markers) scattered around the apartment, and the agent is asked to clean them up. The agent’s objective is to collect as many markers as possible on the grid. The apartment is represented by a 14x22 grid. While the agent’s location remains fixed, the positions of the markers are randomized. The reward is calculated by dividing the number of markers collected by the total number of markers in the initial Karel state.

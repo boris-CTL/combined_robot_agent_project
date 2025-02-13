@@ -1,2 +1,0 @@
-Task name: harvester
-The goal is to collect more markers on the grid, with markers appearing in all grids in the initial Karel environment. The reward is defined as the number of collected markers divided by the total markers in the initial state.

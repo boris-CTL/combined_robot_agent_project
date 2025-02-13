@@ -1,2 +1,0 @@
-Task name: randomMaze
-In this task, the agent has to navigate to reach the marked destination. The locations of markers and the agent, as well as the configuration of the maze, are randomized. The reward is 1 if the agent successfully reaches the marked grid or otherwise 0.

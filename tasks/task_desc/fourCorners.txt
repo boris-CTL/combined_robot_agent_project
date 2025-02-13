@@ -1,2 +1,0 @@
-Task name: fourCorners
-The goal of the agent in this task is to place a marker on each corner of the grid to earn the reward. If any marker is placed in the wrong location, the reward is 0. The initial position of the agent is randomized near the wall. The reward is calculated by multiplying the number of correctly placed markers by 0.25.
